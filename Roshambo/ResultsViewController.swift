@@ -40,6 +40,30 @@ class ResultsViewController: UIViewController {
             resultText.text = "It's a tie!"
             return
         }
+        
+        switch(userChoice) {
+            case "Rock":
+                youWon = opponentChoice == "Scissors"
+            case "Paper":
+                youWon = opponentChoice == "Rock"
+            default:
+                youWon = opponentChoice == "Paper"
+        }
+        
+        if youWon {
+            text = "You Won! \(matchup)"
+            imageName = "\(userChoice) - \(opponentChoice)".lowercaseString
+        } else {
+            text = "You Lost! \(matchup)"
+            imageName = "\(opponentChoice) - \(userChoice)".lowercaseString
+        }
+        resultImage.image = UIImage(named: imageName)
+        resultText.text = text
+    }
+    
+    
+    @IBAction func playAgain(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 }
