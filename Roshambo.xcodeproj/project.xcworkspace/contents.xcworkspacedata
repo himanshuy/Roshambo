@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Roshambo/ResultViewController.swift">
+      location = "group:../Roshambo/ResultsViewController.swift">
    </FileRef>
    <FileRef
       location = "self:Roshambo.xcodeproj">

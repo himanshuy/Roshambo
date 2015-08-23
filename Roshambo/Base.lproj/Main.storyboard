@@ -25,6 +25,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="136" y="302" width="37" height="32"/>
                                 </variation>
+                                <connections>
+                                    <action selector="playRock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Abh-yt-j0U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqQ-V7-vNO">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -35,6 +38,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="227" y="302" width="37" height="32"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="Aoc-ye-WBk" kind="show" identifier="play" id="huU-J5-l4r"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buK-jS-dpP">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -45,6 +51,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="182" y="248" width="37" height="32"/>
                                 </variation>
+                                <connections>
+                                    <action selector="playScissor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mYa-n2-eAf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -64,15 +73,20 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="paperButton" destination="dqQ-V7-vNO" id="d1d-6Z-1EP"/>
+                        <outlet property="rockButton" destination="06R-tr-iD1" id="uCV-Iw-90r"/>
+                        <outlet property="scissorButton" destination="buK-jS-dpP" id="uxT-yr-ZOx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="439.5" y="387"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="QwW-zy-x9p">
             <objects>
-                <viewController id="Aoc-ye-WBk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultsViewController" id="Aoc-ye-WBk" customClass="ResultsViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ugi-8j-NTY"/>
                         <viewControllerLayoutGuide type="bottom" id="fY7-D9-spV"/>
@@ -85,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmg-Rw-I4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104" y="387"/>
+            <point key="canvasLocation" x="1224" y="387"/>
         </scene>
     </scenes>
     <resources>

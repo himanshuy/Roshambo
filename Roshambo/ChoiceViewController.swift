@@ -10,16 +10,43 @@ import UIKit
 
 class ChoiceViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var rockButton: UIButton!
+    @IBOutlet weak var scissorButton: UIButton!
+    @IBOutlet weak var paperButton: UIButton!
+    
+    
+    @IBAction func playRock(sender: UIButton) {
+        var controller: ResultsViewController
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
+        controller.userChoice = getUserChoice(sender)
+        
+        presentViewController(controller, animated: true, completion: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func playScissor(sender: UIButton) {
+        performSegueWithIdentifier("play", sender: sender)
     }
-
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "play" {
+            if let controller = segue.destinationViewController as? ResultsViewController {
+                controller.userChoice = getUserChoice(sender as! UIButton)
+            }
+        }
+    }
+    
+    private func getUserChoice(sender: UIButton) -> String {
+        if sender == rockButton {
+            return "Rock"
+        }
+            
+        else if sender == scissorButton {
+            return "Scissors"
+        }
+        
+        else {
+            return "Paper"
+        }
+    }
 }
 
