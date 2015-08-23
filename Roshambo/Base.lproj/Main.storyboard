@@ -93,9 +93,77 @@
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sh7-Jp-3UI">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itsATie" translatesAutoresizingMaskIntoConstraints="NO" id="tn2-am-Kjs">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rH-cv-bCi">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnG-N2-mJt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Play again!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="tn2-am-Kjs" secondAttribute="centerY" id="05I-D3-TBS"/>
+                            <constraint firstAttribute="centerY" secondItem="tn2-am-Kjs" secondAttribute="centerY" id="218-Si-dr8"/>
+                            <constraint firstAttribute="centerX" secondItem="4rH-cv-bCi" secondAttribute="centerX" id="QqM-eC-EuZ"/>
+                            <constraint firstAttribute="centerX" secondItem="tn2-am-Kjs" secondAttribute="centerX" id="WKu-s7-FgH"/>
+                            <constraint firstItem="KnG-N2-mJt" firstAttribute="top" secondItem="4rH-cv-bCi" secondAttribute="bottom" constant="17.5" id="bxZ-gn-Uw3"/>
+                            <constraint firstAttribute="centerX" secondItem="KnG-N2-mJt" secondAttribute="centerX" constant="-0.5" id="feX-em-hX9"/>
+                            <constraint firstAttribute="centerX" secondItem="tn2-am-Kjs" secondAttribute="centerX" id="hEA-wo-bxY"/>
+                            <constraint firstItem="fY7-D9-spV" firstAttribute="top" secondItem="4rH-cv-bCi" secondAttribute="bottom" constant="221" id="vne-Sh-Xve"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tn2-am-Kjs"/>
+                                <exclude reference="4rH-cv-bCi"/>
+                                <exclude reference="KnG-N2-mJt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="05I-D3-TBS"/>
+                                <exclude reference="218-Si-dr8"/>
+                                <exclude reference="WKu-s7-FgH"/>
+                                <exclude reference="hEA-wo-bxY"/>
+                                <exclude reference="QqM-eC-EuZ"/>
+                                <exclude reference="bxZ-gn-Uw3"/>
+                                <exclude reference="feX-em-hX9"/>
+                                <exclude reference="vne-Sh-Xve"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="tn2-am-Kjs"/>
+                                <include reference="4rH-cv-bCi"/>
+                                <include reference="KnG-N2-mJt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="05I-D3-TBS"/>
+                                <include reference="218-Si-dr8"/>
+                                <include reference="WKu-s7-FgH"/>
+                                <include reference="hEA-wo-bxY"/>
+                                <include reference="QqM-eC-EuZ"/>
+                                <include reference="bxZ-gn-Uw3"/>
+                                <include reference="feX-em-hX9"/>
+                                <include reference="vne-Sh-Xve"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="resultImage" destination="tn2-am-Kjs" id="s3q-he-OXR"/>
+                        <outlet property="resultText" destination="4rH-cv-bCi" id="hGK-Dg-oDo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmg-Rw-I4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,6 +171,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="itsATie" width="91" height="100"/>
         <image name="paper" width="37" height="32"/>
         <image name="rock" width="37" height="32"/>
         <image name="scissors" width="37" height="32"/>
