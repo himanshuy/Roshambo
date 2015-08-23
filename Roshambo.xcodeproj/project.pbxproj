@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF297EA81B895A1C007052FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF297EA71B895A1C007052FF /* AppDelegate.swift */; };
-		AF297EAA1B895A1C007052FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF297EA91B895A1C007052FF /* ViewController.swift */; };
+		AF297EAA1B895A1C007052FF /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF297EA91B895A1C007052FF /* ChoiceViewController.swift */; };
 		AF297EAD1B895A1C007052FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF297EAB1B895A1C007052FF /* Main.storyboard */; };
 		AF297EAF1B895A1C007052FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF297EAE1B895A1C007052FF /* Images.xcassets */; };
 		AF297EB21B895A1C007052FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF297EB01B895A1C007052FF /* LaunchScreen.xib */; };
@@ -29,7 +29,7 @@
 		AF297EA21B895A1C007052FF /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF297EA61B895A1C007052FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF297EA71B895A1C007052FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF297EA91B895A1C007052FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF297EA91B895A1C007052FF /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		AF297EAC1B895A1C007052FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF297EAE1B895A1C007052FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF297EB11B895A1C007052FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				AF297EA71B895A1C007052FF /* AppDelegate.swift */,
-				AF297EA91B895A1C007052FF /* ViewController.swift */,
+				AF297EA91B895A1C007052FF /* ChoiceViewController.swift */,
 				AF297EAB1B895A1C007052FF /* Main.storyboard */,
 				AF297EAE1B895A1C007052FF /* Images.xcassets */,
 				AF297EB01B895A1C007052FF /* LaunchScreen.xib */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF297EAA1B895A1C007052FF /* ViewController.swift in Sources */,
+				AF297EAA1B895A1C007052FF /* ChoiceViewController.swift in Sources */,
 				AF297EA81B895A1C007052FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +409,7 @@
 				AF297EC31B895A1C007052FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF297EC41B895A1C007052FF /* Build configuration list for PBXNativeTarget "RoshamboTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				AF297EC61B895A1C007052FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

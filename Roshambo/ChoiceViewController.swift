@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ChoiceViewController.swift
 //  Roshambo
 //
 //  Created by Himanshu Yadav on 8/22/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChoiceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
